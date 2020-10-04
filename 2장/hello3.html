@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<body>
+    <h1>데이터를 v-html로 표시하는 예제</h1>
+    <div id="app">
+        <p> {{ myText }}</p>
+        <p v-text="myText"></p>
+        <p v-html="myText"></p>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            myText:'<h1>Hello !!!</h1>'
+        }
+    })
+</script>
