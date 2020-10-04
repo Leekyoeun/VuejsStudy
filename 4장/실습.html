@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<body>
+    <h1>입력폼 활용</h1>
+    <div id="app">
+        <label>이름: <input type="text" v-model.lazy="name" ></label><br>
+        좋아하는 색은?<br>
+        <label><input type="radio" value="red" v-model="picked">빨강</label><br>
+        <label><input type="radio" value="green" v-model="picked">녹색</label><br>
+        <label><input type="radio" value="blue" v-model="picked">파란색</label><br>
+        <label><input type="radio" value="yellow" v-model="picked">노란색</label><br>
+        <label><input type="radio" value="gray" v-model="picked">회색</label><br>
+        <p> 내 이름은 {{ name }} 이고, 좋아하는 색은 {{ picked }} 입니다.</p>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                name:'',
+                color:[],
+                picked:''
+            }
+        })
+    </script>
+</body>

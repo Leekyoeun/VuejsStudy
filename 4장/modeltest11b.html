@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<body>
+    <h1>입력을 자동으로 수식으로 변경하지 않는 예제</h1>
+    <div id="app">
+        <input v-model="myNumber" type="number">
+        <p>100을 더해서 표시 {{ 100 + myNumber }}</p>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                myNumber:0
+            }
+        })
+    </script>
+</body>
