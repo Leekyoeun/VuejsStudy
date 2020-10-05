@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<body>
+    <h1>클릭하면 1씩 증가하는 예제</h1>
+    <div id="app">
+       <ul>
+           <li v-for="item in objArray">{{ item.name }} \ {{ item.price }}</li>
+       </ul>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+               objArray:[
+                   {'name':'쨈빵', price:1000},
+                   {'name':'멜론빵', price:1200},
+                   {'name':'크로와상', price:1500}
+               ]
+        }
+    })
+    </script>
+</body>

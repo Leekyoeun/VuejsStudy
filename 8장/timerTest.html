@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	
+	<body>
+        <h2>남은 시간이 0초가 되면 얼럿을 띄우는 예제</h2>
+        <button onclick="startTimer()">START</button>
+	
+		<script>
+			function startTimer(){
+                //남은 시간 5초
+                this.restSec=5;
+                //타이머 시작
+                this.timerObj=setInterval(()=>{ countDown()}, 1000)
+            }
+            function countDown(){
+                this.restSec--;
+                if(this.restSec<=0){
+                    alert("제한시간 입니다");
+                    clearInterval(this.timerObj);
+                }
+            }
+		</script>
+	</body>
+</html>
