@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <meta charset='utf-8'>
+    <title>실습하기</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <body>
+        <h1>컴포넌트를 숫자출력</h1>
+        <div id="app">
+            <my-component v-for="item in ListArray" v-bind:List="item"></my-component>
+        
+        </div>
+        <script>
+            var MyComponent={
+                template:'<p>{{ result }}</p>',
+                props:{
+                    List: Number
+                },
+                computed:{
+                    result:function(){
+                        if(this.List %2==0){
+                            return this.List+"은 짝수 입니다"
+                        }else{
+                            return this.List+"은 홀수 입니다"
+                        }
+                    }   
+                }
+            }
+            new Vue({
+                el:'#app',
+                data:{
+                    ListArray:[1,2,3,4,5,6,7,8,9,10]
+                },
+                components:{
+                    'my-component':MyComponent
+                    }
+                })
+        </script>
+    </body>
+</html>
